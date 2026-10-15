@@ -1,0 +1,1592 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Lautaro Tapia — Digital Transformation Project Manager. Three projects and three builds, 2018-2026: a performance audit at MercadoLibre, a WalkMe PoC over SAP at Accenture, and an organizational diagnostic with the build that followed it.">
+<meta name="author" content="Lautaro Tapia">
+<link rel="canonical" href="https://lautarotapiaa.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316222D'/%3E%3Cpath d='M9 23 L16 9 L23 23 L16 19 Z' fill='%231E6FA8'/%3E%3C/svg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Lautaro Tapia — Portfolio">
+<meta property="og:description" content="Portfolio of Lautaro Tapia — Digital Transformation Project Manager. Three projects and three builds, 2018-2026: a performance audit at MercadoLibre, a WalkMe PoC over SAP at Accenture, and an organizational diagnostic with the build that followed it.">
+<meta property="og:url" content="https://lautarotapiaa.github.io/">
+<meta name="twitter:card" content="summary">
+<style>
+:root{color-scheme:light dark}
+*{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Lautaro Tapia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Rubik:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* ============================================================
+   TOKENS — la paleta es función del IDIOMA, no del sistema.
+   EN  = papel cálido, tinta navy  (claro)
+   ES  = la misma paleta invertida (oscuro)
+   Tres colores con un trabajo cada uno: azul = acento y links,
+   verde-teal = estado y navegación, ocre = procedencia de un número.
+   ============================================================ */
+:root, html[data-lang="en"]{
+  color-scheme:light;
+  --ground:#F4F3EE;
+  --panel:#FFFFFF;
+  --panel-2:#EDEBE3;
+  --ink:#15212C;
+  --ink-soft:#4B5B68;
+  --ink-faint:#6F7D89;
+  --rule:#DFDCD2;
+  --rule-strong:#C2BEB1;
+  --accent:#1A6FD4;
+  --accent-ink:#114E9E;
+  --accent-soft:#E3ECFB;
+  --accent-2:#0B6F63;
+  --accent-2-soft:#DEF0EC;
+  --evidence:#96580F;
+  --evidence-soft:#F6EBD8;
+  --shadow:0 1px 2px rgba(21,33,44,.06), 0 14px 34px -24px rgba(21,33,44,.30);
+  --shadow-lift:0 2px 5px rgba(21,33,44,.08), 0 24px 46px -26px rgba(21,33,44,.42);
+  --glow-1:color-mix(in srgb,var(--accent) 11%,transparent);
+  --glow-2:color-mix(in srgb,var(--accent-2) 9%,transparent);
+  --display:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+html[data-lang="es"]{
+  color-scheme:dark;
+  --ground:#101820;
+  --panel:#18232E;
+  --panel-2:#202C38;
+  --ink:#ECE8E0;
+  --ink-soft:#A9B6C1;
+  --ink-faint:#7D8B96;
+  --rule:#27333E;
+  --rule-strong:#3D4B57;
+  --accent:#6DB3F2;
+  --accent-ink:#9CCDF6;
+  --accent-soft:#13293D;
+  --accent-2:#45C9B6;
+  --accent-2-soft:#0F2B28;
+  --evidence:#DFAE68;
+  --evidence-soft:#2A2214;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 34px -24px rgba(0,0,0,.85);
+  --shadow-lift:0 2px 6px rgba(0,0,0,.55), 0 26px 50px -26px rgba(0,0,0,.95);
+  --glow-1:color-mix(in srgb,var(--accent) 14%,transparent);
+  --glow-2:color-mix(in srgb,var(--accent-2) 10%,transparent);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-weight:400;
+  font-size:16.5px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.12;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--accent-ink);text-decoration:none}
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.prose{max-width:66ch}
+
+/* language switching: Spanish hidden until html[data-lang="es"] */
+.es{display:none}
+html[data-lang="es"] .es{display:revert}
+html[data-lang="es"] .en{display:none}
+
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+.bar{
+  position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb,var(--ground) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{
+  max-width:1080px;margin:0 auto;padding:11px 24px;
+  display:flex;align-items:center;gap:20px;
+}
+.mark{
+  font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.04em;
+  color:var(--ink);white-space:nowrap;
+}
+.mark span{color:var(--accent)}
+.navlinks{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.navlinks a{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-soft);padding:7px 9px;border-radius:4px;
+}
+.navlinks a:hover{color:var(--ink);background:var(--panel-2)}
+.navlinks a[aria-current="true"]{color:var(--accent-ink);background:var(--accent-soft)}
+.langtog{
+  display:flex;border:1px solid var(--rule-strong);border-radius:5px;overflow:hidden;flex:0 0 auto;
+}
+.langtog button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;
+  background:transparent;color:var(--ink-soft);border:0;padding:6px 9px;cursor:pointer;
+}
+.langtog button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+@media (max-width:880px){
+  .navlinks{display:none}
+  .bar-in{justify-content:space-between}
+  .langtog{margin-left:auto}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{padding:72px 0 8px}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);
+}
+.hero h1{
+  font-size:clamp(2.6rem,7vw,4.5rem);font-weight:700;letter-spacing:-.025em;
+  margin:14px 0 10px;
+}
+.hero .role{
+  font-family:var(--display);font-weight:500;font-size:clamp(1.05rem,2.4vw,1.4rem);
+  color:var(--accent-ink);line-height:1.3;max-width:34ch;
+}
+.hero .where{
+  margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 18px;
+  font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);
+}
+.hero .where b{color:var(--ink);font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;
+  padding:11px 16px;border-radius:6px;border:1px solid var(--rule-strong);
+  background:var(--panel);color:var(--ink);box-shadow:var(--shadow);
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn:hover{border-color:var(--accent);color:var(--accent-ink)}
+.btn.solid{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.btn.solid:hover{background:var(--accent-ink);border-color:var(--accent-ink);color:#fff}
+
+/* thesis block — the method line is the loudest element on the page */
+.thesis{
+  margin:56px 0 0;padding:34px 0 0;border-top:1px solid var(--rule);
+}
+.thesis p{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(1.25rem,2.9vw,1.85rem);line-height:1.3;letter-spacing:-.012em;
+  max-width:30ch;
+}
+.thesis .fine{
+  font-family:var(--sans);font-size:15px;font-weight:300;line-height:1.6;
+  color:var(--ink-soft);max-width:60ch;margin-top:18px;
+}
+.gates{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  margin-top:34px;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+}
+.gate{background:var(--panel);padding:18px 18px 20px}
+.gate .n{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--evidence);
+  display:block;margin-bottom:9px;
+}
+.gate b{font-family:var(--display);font-weight:600;font-size:1.02rem;display:block;margin-bottom:4px}
+.gate small{color:var(--ink-soft);font-size:13.5px;line-height:1.5;display:block}
+@media (max-width:720px){.gates{grid-template-columns:1fr}}
+
+/* ============================================================
+   METRICS — every number carries its measurer
+   ============================================================ */
+.metrics{
+  display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:1px;
+  margin:56px 0 0;background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+}
+.metric{background:var(--panel);padding:20px 18px}
+.metric .fig{
+  font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.6vw,2.2rem);
+  letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums;
+}
+.metric .what{font-size:14px;color:var(--ink-soft);line-height:1.45;margin-top:4px;display:block}
+.metric .src{
+  font-family:var(--mono);font-size:10.5px;line-height:1.5;letter-spacing:.02em;
+  color:var(--evidence);margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule-strong);
+  display:block;
+}
+@media (max-width:900px){.metrics{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.metrics{grid-template-columns:1fr}}
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section{padding:84px 0 0}
+.sechead{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--rule-strong);padding-bottom:12px}
+.sechead .num{font-family:var(--mono);font-size:12px;color:var(--ink-faint);letter-spacing:.1em}
+.sechead h2{font-size:clamp(1.3rem,3vw,1.75rem);letter-spacing:-.018em}
+.sechead .aside{
+  margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--ink-faint);
+}
+.lead{margin-top:22px;color:var(--ink-soft);font-weight:300;font-size:17px}
+.lead strong{color:var(--ink);font-weight:500}
+
+/* ============================================================
+   CASE STUDIES
+   ============================================================ */
+.case{
+  background:var(--panel);border:1px solid var(--rule);border-radius:10px;
+  box-shadow:var(--shadow);margin-top:26px;overflow:hidden;
+}
+.case-head{padding:26px 26px 22px;border-bottom:1px solid var(--rule)}
+.case-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.case-top .idx{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;color:var(--accent);
+}
+.case-top .yrs{font-family:var(--mono);font-size:12px;color:var(--ink-faint);margin-left:auto}
+.case h3{font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-.022em;margin:8px 0 6px}
+.case .sub{color:var(--ink-soft);font-size:15.5px;max-width:62ch}
+.case .rolel{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-faint);
+  margin-top:10px;text-transform:uppercase;
+}
+.outcome{
+  display:flex;gap:14px;align-items:flex-start;margin-top:20px;padding:14px 16px;
+  background:var(--accent-soft);border-radius:7px;
+}
+.outcome .fig{
+  font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--accent-ink);
+  white-space:nowrap;font-variant-numeric:tabular-nums;
+}
+.outcome p{font-size:14.5px;color:var(--ink);line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
+.chip{
+  font-family:var(--mono);font-size:11px;letter-spacing:.03em;
+  border:1px solid var(--rule-strong);border-radius:4px;padding:4px 8px;color:var(--ink-soft);
+}
+
+/* the ledger: mono label column + prose column */
+details.full{border-top:0}
+details.full>summary{
+  list-style:none;cursor:pointer;padding:16px 26px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--accent-ink);display:flex;align-items:center;gap:10px;background:var(--panel-2);
+}
+details.full>summary::-webkit-details-marker{display:none}
+details.full>summary:hover{color:var(--ink)}
+details.full>summary .caret{
+  display:inline-block;transition:transform .18s ease;font-size:14px;line-height:1;
+}
+@media (prefers-reduced-motion:reduce){details.full>summary .caret{transition:none}}
+details.full[open]>summary .caret{transform:rotate(90deg)}
+details.full[open]>summary{border-bottom:1px solid var(--rule)}
+.ledger{padding:6px 26px 28px}
+.row{
+  display:grid;grid-template-columns:186px 1fr;gap:28px;
+  padding:22px 0;border-bottom:1px solid var(--rule);
+}
+.row:last-child{border-bottom:0}
+.row>dt{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-faint);padding-top:3px;
+}
+.row>dd{margin:0;display:flex;flex-direction:column;gap:12px;max-width:68ch}
+.row>dd p{font-size:15.5px;line-height:1.62}
+.row>dd b{font-weight:500;color:var(--ink)}
+.pull{
+  border-left:2px solid var(--accent);padding-left:14px;
+  font-size:15.5px;color:var(--ink);font-weight:300;
+}
+@media (max-width:760px){
+  .row{grid-template-columns:1fr;gap:8px}
+  .row>dt{padding-top:0}
+  .ledger,.case-head,details.full>summary{padding-left:18px;padding-right:18px}
+}
+
+/* ============================================================
+   EXPERIENCE LEDGER
+   ============================================================ */
+.jobs{margin-top:10px}
+.job{
+  display:grid;grid-template-columns:160px 1fr;gap:28px;
+  padding:22px 0;border-bottom:1px solid var(--rule);
+}
+.job .when{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);padding-top:3px}
+.job .when small{display:block;color:var(--ink-faint);font-size:11px;margin-top:3px}
+.job h3{font-size:1.1rem;letter-spacing:-.01em}
+.job .co{font-family:var(--mono);font-size:12px;color:var(--accent-ink);margin:5px 0 9px;letter-spacing:.04em}
+.job ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.job li{font-size:15px;color:var(--ink-soft);line-height:1.55}
+.job li::marker{color:var(--rule-strong)}
+@media (max-width:760px){.job{grid-template-columns:1fr;gap:10px}.job .when{padding-top:0}}
+
+/* ============================================================
+   TOOLKIT
+   ============================================================ */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:26px;
+  background:var(--rule);border:1px solid var(--rule);border-radius:9px;overflow:hidden}
+.cell{background:var(--panel);padding:22px}
+.cell h4{
+  font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px;
+}
+.taglist{display:flex;flex-wrap:wrap;gap:6px}
+.taglist span{
+  font-size:13.5px;border:1px solid var(--rule-strong);border-radius:20px;
+  padding:4px 11px;color:var(--ink);
+}
+.stack{font-family:var(--mono);font-size:13px;line-height:1.85;color:var(--ink-soft)}
+.stack b{color:var(--ink);font-weight:500}
+.deflist{display:flex;flex-direction:column;gap:13px}
+.deflist div b{display:block;font-weight:500;font-size:15px}
+.deflist div small{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint)}
+.langbars{display:flex;flex-direction:column;gap:12px}
+.cell.wide{grid-column:1/-1}
+.cell.wide .langbars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:760px){.cell.wide .langbars{grid-template-columns:1fr}}
+.langbar b{font-size:15px;font-weight:500}
+.langbar small{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);margin-left:7px}
+.dots{display:flex;gap:5px;margin-top:6px}
+.dots i{width:11px;height:11px;border-radius:50%;background:var(--panel-2);border:1px solid var(--rule-strong)}
+.dots i.on{background:var(--accent);border-color:var(--accent)}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+
+/* ============================================================
+   TESTIMONIOS
+   ============================================================ */
+.quote{
+  margin:26px 0 0;padding:28px 30px;background:var(--panel);
+  border:1px solid var(--rule);border-radius:10px;box-shadow:var(--shadow);
+}
+.quote blockquote{
+  margin:0;font-size:16.5px;line-height:1.72;color:var(--ink);max-width:74ch;font-weight:300;
+}
+.quote blockquote::before{
+  content:"\201C";font-family:var(--display);font-weight:700;font-size:2.6rem;line-height:0;
+  color:var(--accent-2);vertical-align:-.32em;margin-right:7px;
+}
+.quote figcaption{
+  margin-top:22px;padding-top:16px;border-top:1px solid var(--rule);
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 14px;
+}
+.quote figcaption b{font-family:var(--display);font-weight:600;font-size:15.5px}
+.quote figcaption span{font-family:var(--mono);font-size:12px;color:var(--accent-ink);letter-spacing:.04em}
+.quote figcaption small{
+  font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:.04em;
+}
+.quote .qsrc{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--ink-faint);margin-top:10px;
+}
+
+/* ============================================================
+   CONTACT + FOOTNOTE
+   ============================================================ */
+.contact{
+  margin-top:26px;padding:34px 30px;border-radius:10px;
+  background:var(--panel);border:1px solid var(--rule);box-shadow:var(--shadow);
+}
+.contact p{max-width:58ch;color:var(--ink-soft);font-weight:300}
+.clist{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.note{
+  margin:72px 0 0;padding:24px 26px;border-radius:9px;
+  background:var(--evidence-soft);border:1px solid color-mix(in srgb,var(--evidence) 30%,transparent);
+}
+.note h4{
+  font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--evidence);margin-bottom:12px;
+}
+.note p{font-size:14.5px;line-height:1.6;color:var(--ink);max-width:72ch}
+.note p+p{margin-top:10px}
+footer{
+  margin-top:56px;padding:26px 0 60px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);
+  display:flex;flex-wrap:wrap;gap:10px 24px;
+}
+
+/* ============================================================
+   HERO PORTRAIT
+   ============================================================ */
+.herogrid{display:grid;grid-template-columns:1fr 272px;gap:48px;align-items:start}
+.portrait{
+  position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--rule);
+  box-shadow:var(--shadow);background:var(--panel-2);aspect-ratio:4/5;
+}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+.portrait figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:22px 12px 9px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:#fff;
+  background:linear-gradient(to top,rgba(10,18,26,.82),transparent);
+}
+@media (max-width:860px){
+  .herogrid{grid-template-columns:1fr;gap:28px}
+  .portrait{max-width:240px}
+}
+
+/* ============================================================
+   BRAND MARKS — built here in type and colour, not borrowed logos
+   ============================================================ */
+.mark-badge{
+  display:inline-flex;align-items:center;gap:9px;height:38px;padding:0 14px;
+  border-radius:7px;font-family:var(--display);font-weight:700;font-size:14px;
+  letter-spacing:-.01em;white-space:nowrap;
+}
+.mark-meli{background:#FFE600;color:#2D3277}
+.mark-meli .glyph{font-size:17px;line-height:1}
+.mark-acc{background:#111013;color:#fff}
+.mark-acc .glyph{color:#A100FF;font-size:19px;line-height:1;font-weight:700}
+.mark-mad{background:var(--accent-soft);color:var(--accent-ink);border:1px solid var(--accent)}
+.mark-mad .glyph{font-size:15px;line-height:1}
+
+/* ============================================================
+   PER-PROJECT NUMBERS
+   ============================================================ */
+.bynum{margin-top:22px}
+.bynum h4{
+  font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;
+}
+.numgrid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:1px;
+  background:var(--rule);border:1px solid var(--rule);border-radius:8px;overflow:hidden}
+.numgrid.cols-4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:820px){.numgrid,.numgrid.cols-4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.numgrid,.numgrid.cols-4{grid-template-columns:1fr}}
+.numgrid .num{background:var(--panel-2);padding:13px 14px}
+.numgrid .num b{
+  display:block;font-family:var(--display);font-weight:700;font-size:1.22rem;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--ink);
+}
+.numgrid .num small{display:block;font-size:12.5px;color:var(--ink-soft);line-height:1.4;margin-top:2px}
+.numgrid .num.hero-num b{color:var(--accent-ink)}
+
+/* ============================================================
+   BUILDS
+   ============================================================ */
+.build{
+  background:var(--panel);border:1px solid var(--rule);border-radius:10px;
+  box-shadow:var(--shadow);margin-top:18px;padding:24px 26px;
+}
+.build h3{font-size:1.18rem;letter-spacing:-.015em}
+.build .thesis-line{font-size:15.5px;color:var(--ink);margin-top:8px;max-width:66ch}
+.build .meta{
+  font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);margin-top:10px;line-height:1.7;
+}
+.build .meta b{color:var(--ink-soft);font-weight:500}
+.build details{margin-top:14px}
+.build summary{
+  list-style:none;cursor:pointer;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);
+  display:inline-flex;align-items:center;gap:8px;
+}
+.build summary::-webkit-details-marker{display:none}
+.build summary .caret{display:inline-block;transition:transform .18s ease}
+@media (prefers-reduced-motion:reduce){.build summary .caret{transition:none}}
+.build details[open] summary .caret{transform:rotate(90deg)}
+.build .body{margin-top:14px;display:flex;flex-direction:column;gap:11px;max-width:68ch}
+.build .body p{font-size:15px;line-height:1.6;color:var(--ink-soft)}
+.build .body b{color:var(--ink);font-weight:500}
+
+/* flow diagram */
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.flow span{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.02em;padding:5px 9px;
+  border:1px solid var(--rule-strong);border-radius:4px;color:var(--ink-soft);background:var(--panel-2);
+}
+.flow span.human{border-color:var(--evidence);color:var(--evidence);background:var(--evidence-soft)}
+.flow i{color:var(--ink-faint);font-style:normal;font-size:11px}
+
+/* video slot */
+.videoslot{
+  margin-top:20px;border:1px dashed var(--rule-strong);border-radius:9px;
+  padding:26px 22px;text-align:center;background:var(--panel-2);
+}
+.videoslot b{display:block;font-family:var(--display);font-size:1rem;margin-bottom:5px}
+.videoslot small{font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:.04em}
+
+/* ============================================================
+   WHO I AM — chapters
+   ============================================================ */
+.whogrid{display:grid;grid-template-columns:1fr 300px;gap:44px;align-items:start;margin-top:26px}
+@media (max-width:900px){.whogrid{grid-template-columns:1fr;gap:32px}}
+.chapter{padding:26px 0;border-bottom:1px solid var(--rule)}
+.chapter:last-of-type{border-bottom:0}
+.chapter .ch-label{
+  font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--evidence);margin-bottom:9px;
+}
+.chapter h3{font-size:1.3rem;letter-spacing:-.018em;margin-bottom:12px}
+.chapter p{font-size:16px;line-height:1.66;color:var(--ink-soft);margin-bottom:.9em;max-width:64ch}
+.chapter p:last-child{margin-bottom:0}
+.chapter p b{color:var(--ink);font-weight:500}
+.shot{margin:18px 0 0;border-radius:9px;overflow:hidden;border:1px solid var(--rule);box-shadow:var(--shadow)}
+.shot img{width:100%;display:block}
+.shot figcaption{
+  font-family:var(--mono);font-size:11px;color:var(--ink-faint);
+  padding:10px 13px;background:var(--panel);letter-spacing:.03em;
+}
+.photorow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.mediarow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.mediarow .shot img,.mediarow .shot video{
+  width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000;
+}
+.mediarow .shot img{object-position:50% 46%}
+@media (max-width:760px){.mediarow{grid-template-columns:1fr}}
+.photorow-3{grid-template-columns:repeat(3,1fr)}
+.photorow-3 .shot img{aspect-ratio:3/4;object-fit:cover}
+@media (max-width:760px){.photorow,.photorow-3{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.photorow,.photorow-3{grid-template-columns:1fr}}
+
+/* profile card */
+.pcard{
+  background:var(--panel);border:1px solid var(--rule);border-radius:10px;
+  box-shadow:var(--shadow);overflow:hidden;position:sticky;top:96px;
+}
+.pcard .pc-body{padding:20px}
+.pcard dl{margin:0;display:flex;flex-direction:column;gap:14px}
+.pcard dt{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-faint);margin-bottom:3px;
+}
+.pcard dd{margin:0;font-size:14.5px;color:var(--ink);line-height:1.45}
+.pcard dd a{border-bottom:1px solid color-mix(in srgb,var(--accent) 40%,transparent)}
+@media (max-width:900px){.pcard{position:static}}
+/* Quién soy — versión corta */
+.throughline{
+  font-family:var(--display);font-weight:600;font-size:clamp(1.05rem,2.2vw,1.3rem);
+  line-height:1.35;letter-spacing:-.012em;color:var(--ink);
+  margin-top:22px;max-width:46ch;
+}
+.seeking{
+  font-style:italic;font-size:15.5px;line-height:1.6;color:var(--ink-soft);
+  margin-top:16px;max-width:60ch;
+  border-left:2px solid var(--accent);padding-left:14px;
+}
+.offlabel{
+  font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-faint);margin:34px 0 0;
+}
+.pcard-shot{margin:0;border-bottom:1px solid var(--rule)}
+.pcard-shot img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%}
+.pcard-shot figcaption{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.03em;color:var(--ink-faint);
+  padding:9px 20px;
+}
+
+/* ============================================================
+   DETALLES — dónde entra el color
+   ============================================================ */
+/* luz de fondo: dos manchas muy tenues, ancladas a la ventana */
+body{
+  background-color:var(--ground);
+  background-image:
+    radial-gradient(60% 45% at 88% -8%, var(--glow-1), transparent 70%),
+    radial-gradient(50% 40% at 4% 42%, var(--glow-2), transparent 72%);
+  background-attachment:fixed,fixed;
+  background-repeat:no-repeat;
+}
+/* número de sección en teal + barra de dos colores bajo el título */
+.sechead{position:relative}
+.sechead .num{color:var(--accent-2);font-weight:500}
+.sechead::after{
+  content:"";position:absolute;left:0;bottom:-1px;width:58px;height:2px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+}
+/* el punto de la marca respira con los dos acentos */
+.mark span{color:var(--accent-2)}
+/* celdas: el color entra en hover, sin mover la grilla de 1px */
+.metric,.numgrid .num,.gate,.cell{transition:background .22s ease}
+.metric:hover,.gate:hover,.cell:hover{background:color-mix(in srgb,var(--accent) 5%,var(--panel))}
+.numgrid .num:hover{background:var(--panel)}
+.metric .fig{font-variant-numeric:tabular-nums}
+.langbar .dots i.on{background:var(--accent-2);border-color:var(--accent-2)}
+
+/* ============================================================
+   MOVIMIENTO — sutil, y apagado entero con prefers-reduced-motion
+   ============================================================ */
+/* barra de lectura */
+.progress{
+  position:fixed;left:0;top:0;height:2px;width:0;z-index:60;border-radius:0 2px 2px 0;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+}
+/* aparecer al scrollear — solo si el JS marcó la raíz */
+html.reveal-on :is(.sechead,.lead,.thesis,.gates,.metrics,.case,.build,.chapter,.photorow,.mediarow,.job,.numgrid,.grid2,.contact,.note,.pcard,.throughline,.seeking,.quote){
+  opacity:0;transform:translateY(14px);
+  transition:opacity .62s cubic-bezier(.22,.9,.32,1),transform .62s cubic-bezier(.22,.9,.32,1);
+  transition-delay:var(--rv-d,0ms);
+}
+html.reveal-on .rv-in{opacity:1!important;transform:none!important}
+/* entrada de la portada */
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+html.reveal-on .hero .eyebrow{animation:rise .7s cubic-bezier(.22,.9,.32,1) both;animation-delay:.04s}
+html.reveal-on .hero h1{animation:rise .7s cubic-bezier(.22,.9,.32,1) both;animation-delay:.12s}
+html.reveal-on .hero .role{animation:rise .7s cubic-bezier(.22,.9,.32,1) both;animation-delay:.2s}
+html.reveal-on .hero .where{animation:rise .7s cubic-bezier(.22,.9,.32,1) both;animation-delay:.28s}
+html.reveal-on .hero .cta{animation:rise .7s cubic-bezier(.22,.9,.32,1) both;animation-delay:.36s}
+html.reveal-on .hero .portrait{animation:rise .9s cubic-bezier(.22,.9,.32,1) both;animation-delay:.22s}
+/* parallax del retrato */
+.portrait img{transform:translate3d(0,var(--py,0px),0) scale(1.04)}
+/* levantar al pasar el mouse */
+.case,.build,.contact,.shot,.quote{transition:transform .24s cubic-bezier(.2,.8,.3,1),box-shadow .24s ease,border-color .24s ease}
+.case:hover,.build:hover,.contact:hover,.shot:hover,.quote:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+.btn{transition:transform .16s ease,border-color .16s ease,background .16s ease,color .16s ease,box-shadow .16s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+.btn:active{transform:translateY(0)}
+/* nav: subrayado que crece */
+.navlinks a{position:relative;transition:color .18s ease,background .18s ease}
+.navlinks a::after{
+  content:"";position:absolute;left:9px;right:9px;bottom:2px;height:1.5px;background:var(--accent-2);
+  transform:scaleX(0);transform-origin:left;transition:transform .26s cubic-bezier(.22,.9,.32,1);
+}
+.navlinks a:hover::after,.navlinks a[aria-current="true"]::after{transform:scaleX(1)}
+.langtog button{transition:background .2s ease,color .2s ease}
+/* chips y pasos del flujo */
+.chip,.taglist span,.flow span{transition:border-color .18s ease,color .18s ease,background .18s ease,transform .18s ease}
+.chip:hover,.taglist span:hover,.flow span:hover{border-color:var(--accent);color:var(--accent-ink);transform:translateY(-1px)}
+/* la inversión de paleta al cambiar de idioma: medio segundo, una sola vez */
+html.swapping,html.swapping *{
+  transition:background-color .45s ease,color .45s ease,border-color .45s ease,box-shadow .45s ease!important;
+}
+@media (prefers-reduced-motion:reduce){
+  html.reveal-on :is(.sechead,.lead,.thesis,.gates,.metrics,.case,.build,.chapter,.photorow,.mediarow,.job,.numgrid,.grid2,.contact,.note,.pcard,.throughline,.seeking,.quote){opacity:1;transform:none;transition:none}
+  html.reveal-on .hero .eyebrow,html.reveal-on .hero h1,html.reveal-on .hero .role,
+  html.reveal-on .hero .where,html.reveal-on .hero .cta,html.reveal-on .hero .portrait{animation:none}
+  .case:hover,.build:hover,.contact:hover,.shot:hover,.quote:hover,.btn:hover,
+  .chip:hover,.taglist span:hover,.flow span:hover{transform:none}
+  .portrait img{transform:scale(1.04)}
+  html.swapping,html.swapping *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<script>
+/* corre antes de que se pinte el contenido: fija idioma (= paleta) y habilita el reveal */
+(function(){
+  var r = document.documentElement, l = null;
+  try { l = localStorage.getItem("lt-lang"); } catch(e){}
+  if (l !== "es" && l !== "en") {
+    l = (navigator.language || "en").toLowerCase().indexOf("es") === 0 ? "es" : "en";
+  }
+  r.setAttribute("data-lang", l);
+  r.setAttribute("lang", l);
+  r.className += " reveal-on";
+  /* red de seguridad: si el script de abajo no llegó a correr, se muestra todo */
+  setTimeout(function(){
+    if (r.getAttribute("data-rv") !== "ready") r.className = r.className.replace(" reveal-on", "");
+  }, 2500);
+})();
+</script>
+
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="mark">LAUTARO TAPIA<span>.</span></div>
+    <nav class="navlinks" aria-label="Sections">
+      <a href="#who"><span class="en">About</span><span class="es">Sobre mí</span></a>
+      <a href="#experience"><span class="en">Experience</span><span class="es">Experiencia</span></a>
+      <a href="#toolkit"><span class="en">Skills</span><span class="es">Herramientas</span></a>
+      <a href="#work"><span class="en">Projects</span><span class="es">Proyectos</span></a>
+      <a href="#reviews"><span class="en">Reviews</span><span class="es">Testimonios</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="es">Contacto</span></a>
+    </nav>
+    <div class="langtog" role="group" aria-label="Language">
+      <button type="button" data-setlang="en" aria-pressed="true">EN</button>
+      <button type="button" data-setlang="es" aria-pressed="false">ES</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== HERO ===================== -->
+  <div class="hero">
+    <div class="herogrid">
+      <div>
+        <p class="eyebrow"><span class="en">Portfolio · three projects and three builds, 2018 – 2026</span><span class="es">Portfolio · tres proyectos y tres builds, 2018 – 2026</span></p>
+        <h1>Lautaro Tapia</h1>
+        <p class="role"><span class="en">Digital Transformation &amp; Change Adoption Project Manager</span><span class="es">Project Manager de Transformación Digital y Adopción del Cambio</span></p>
+        <div class="where">
+          <span><b>Buenos Aires</b>, Argentina</span>
+          <span><span class="en"><b>Open to remote work</b> · LATAM &amp; international</span><span class="es"><b>Abierto a trabajar en remoto</b> · LATAM e internacional</span></span>
+          
+          <span><span class="en">🇦🇷 Spanish · 🇺🇸 English · 🇧🇷 Portuguese</span><span class="es">🇦🇷 Español · 🇺🇸 Inglés · 🇧🇷 Portugués</span></span>
+          
+        </div>
+        <div class="cta">
+          <a class="btn solid" href="#experience"><span class="en">View Experience</span><span class="es">Ver experiencia</span></a>
+          <a class="btn" href="#contact"><span class="en">Get in Touch</span><span class="es">Contacto</span></a>
+          <a class="btn" href="assets/Lautaro_Tapia_CV_2026_EN.pdf" target="_blank" rel="noopener"><span class="en">Download CV (EN)</span><span class="es">Descargar CV (EN)</span></a>
+          <a class="btn" href="assets/Lautaro_Tapia_CV_2026_ES.pdf" target="_blank" rel="noopener"><span class="en">Download CV (ES)</span><span class="es">Descargar CV (ES)</span></a>
+        </div>
+      </div>
+      <figure class="portrait" style="margin:0">
+        <img src="assets/img/lauti-hornocal.jpg" alt="Lautaro Tapia en la Serranía de Hornocal, Jujuy">
+        <figcaption>Hornocal, Jujuy · 4.350 m</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ===================== THESIS / METHOD ===================== -->
+  <section id="method" style="padding-top:0">
+    <div class="thesis">
+      <p><span class="en">I connect technology strategy with the reality of the teams: I audit with data, design systems that scale and secure change adoption</span><span class="es">Conecto la estrategia tecnológica con la realidad de los equipos: audito con datos, diseño sistemas escalables y aseguro la adopción del cambio</span></p>
+      <p class="fine"><span class="en">A track record in project management and digital transformation: specialist in productivity optimization and operational process design. I have been leading projects since 2019, taking operational management from its earliest setups to the full integration of AI tools end to end.</span><span class="es">Trayectoria en gestión de proyectos y transformación digital: Especialista en optimización de la productividad y diseño de procesos operativos. Lidero proyectos desde 2019, evolucionando la gestión operativa desde sus esquemas iniciales hasta la integración plena de herramientas de IA end-to-end.</span></p>
+      <div class="gates">
+        <div class="gate">
+          <span class="n">01</span>
+          <b><span class="en">Connect</span><span class="es">Conectar</span></b>
+          <small><span class="en">Interviews, analysis alongside SMEs, and identifying the key metrics that define success. Instruments of my own: I designed a 26-question diagnostic built to map the processes and ideas that can be optimized with AI.</span><span class="es">Entrevistas, análisis junto a SMEs e identificación de métricas clave para validar éxito. Instrumentos propios: diseñé un diagnóstico de 26 preguntas pensadas para mapear procesos e ideas que pueden ser optimizados con IA.</span></small>
+        </div>
+        <div class="gate">
+          <span class="n">02</span>
+          <b><span class="en">Diagnose</span><span class="es">Diagnosticar</span></b>
+          <small><span class="en">A full map of the business: every decision has to be backed by a quote from the founders or the managers.</span><span class="es">Un mapeo integral del negocio: cada decisión tiene que estar respaldada por una cita de los fundadores o managers.</span></small>
+        </div>
+        <div class="gate">
+          <span class="n">03</span>
+          <b><span class="en">Build</span><span class="es">Construir</span></b>
+          <small><span class="en">Every feature comes out of a real diagnosis, and only reaches production if it passes the filter of its users or its day-to-day operators.</span><span class="es">Cada feature nace de un diagnóstico real y solo llega a producción si supera el filtro de sus usuarios o usuarios operativos cotidianos.</span></small>
+        </div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="fig">+20%</div>
+        <small class="what"><span class="en">in performance across the teams analyzed after the mapping</span><span class="es">de rendimiento en equipos analizados luego del mapeo</span></small>
+        <small class="src"><span class="en">MercadoLibre · Project: Catalog</span><span class="es">MercadoLibre · Proyecto: Catálogo</span></small>
+      </div>
+      <div class="metric">
+        <div class="fig">88%</div>
+        <small class="what"><span class="en">adoption, first 100 users</span><span class="es">de adopción, primeros 100 usuarios</span></small>
+        <small class="src"><span class="en">Accenture · Project: WalkMe</span><span class="es">Accenture · Proyecto: WalkMe</span></small>
+      </div>
+      <div class="metric">
+        <div class="fig">−18%</div>
+        <small class="what"><span class="en">daily workload for key business users</span><span class="es">de carga diaria en usuarios clave del negocio</span></small>
+        <small class="src"><span class="en">Accenture · Project: WalkMe</span><span class="es">Accenture · Proyecto: WalkMe</span></small>
+      </div>
+      <div class="metric">
+        <div class="fig">2 h → 10 min</div>
+        <small class="what"><span class="en">Process automation</span><span class="es">Automatización de procesos</span></small>
+        <small class="src"><span class="en">Madiba · Project: Borrajo</span><span class="es">Madiba · Proyecto: Borrajo</span></small>
+      </div>
+      <div class="metric">
+        <div class="fig"><span class="en">8 years</span><span class="es">8 años</span></div>
+        <small class="what"><span class="en">managing projects across consulting, tech and operations</span><span class="es">gestionando proyectos en consultoría, tecnología y operaciones</span></small>
+        <small class="src">MercadoLibre · Accenture · Madiba</small>
+      </div>
+      <div class="metric">
+        <div class="fig"><span class="en">5 years</span><span class="es">5 años</span></div>
+        <small class="what"><span class="en">in Australia — 3 of them in mining, from construction work to leading teams</span><span class="es">en Australia — 3 de ellos en minería, de la construcción a liderar equipos</span></small>
+        <small class="src"><span class="en">2020 – 2025 · BHP and FMG operations</span><span class="es">2020 – 2025 · operaciones de BHP y FMG</span></small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section id="work">
+    <div class="sechead">
+      <span class="num">01</span>
+      <h2><span class="en">Projects</span><span class="es">Proyectos</span></h2>
+    </div>
+    <p class="lead prose"><span class="en">Three projects, each told in six blocks: <strong>context, how it started, process, tools, timeline and results</strong>.</span><span class="es">Tres proyectos, cada uno contado en seis bloques: <strong>contexto, cómo arrancó, proceso, herramientas, tiempos y resultados</strong>.</span></p>
+
+    <!-- ---------- CASE 01 ---------- -->
+    <article class="case">
+      <div class="case-head">
+        <div class="case-top">
+          <span class="idx">01</span>
+          <span class="mark-badge mark-meli"><span class="glyph" aria-hidden="true">⇄</span>MercadoLibre</span>
+          <span class="yrs">2018 – 2020</span>
+        </div>
+        <h3><span class="en">The audit with a two-sided evaluation</span><span class="es">La auditoría con evaluación bilateral</span></h3>
+        <p class="sub"><span class="en">Performance audit of a product-analysis consultancy covering 4 team leaders and more than 50 IT analysts. The process included an independent mapping; we then cross-checked and validated the results.</span><span class="es">Auditoría de desempeño realizada a una consultora de análisis de producto que abarcó a 4 líderes de equipo y más de 50 analistas IT. El proceso incluyó un mapeo independiente, luego contrastamos y validamos resultados.</span></p>
+        <p class="rolel"><span class="en">Senior Team Leader · Catalog area · Buenos Aires</span><span class="es">Senior Team Leader · Área Catálogo · Buenos Aires</span></p>
+        <div class="outcome">
+          <span class="fig">+20%</span>
+          <p><span class="en">Improvement in quality and volume of analysis during the quarter after the audit. That data made it possible to restructure the teams on real performance metrics.</span><span class="es">Mejora en calidad y volumen de análisis durante el trimestre posterior a la auditoría. Estos datos permitieron reestructurar los equipos con base en métricas reales de desempeño.</span></p>
+        </div>
+        <div class="bynum">
+          <h4><span class="en">By the numbers</span><span class="es">En números</span></h4>
+          <div class="numgrid cols-4">
+            <div class="num"><b>4</b><small><span class="en">team leaders audited</span><span class="es">líderes de equipo auditados</span></small></div>
+            <div class="num"><b>50+</b><small><span class="en">IT analysts in scope</span><span class="es">analistas IT en alcance</span></small></div>
+            <div class="num"><b>2</b><small><span class="en">scorings built in parallel</span><span class="es">scorings en paralelo</span></small></div>
+            <div class="num hero-num"><b>+20%</b><small><span class="en">performance, the quarter after</span><span class="es">de rendimiento, el quarter siguiente</span></small></div>
+          </div>
+        </div>
+        <div class="chips">
+          <span class="chip">Google Sheets</span>
+          <span class="chip">Slack</span>
+          <span class="chip"><span class="en">MercadoLibre internal tools</span><span class="es">Herramientas internas de MercadoLibre</span></span>
+          <span class="chip"><span class="en">No AI — 2019</span><span class="es">Sin IA — 2019</span></span>
+        </div>
+      </div>
+      <details class="full">
+        <summary><span class="caret">›</span><span><span class="en">Full project</span><span class="es">Proyecto completo</span></span></summary>
+        <dl class="ledger">
+          <div class="row">
+            <dt><span class="en">Context</span><span class="es">Contexto</span></dt>
+            <dd>
+              <p><span class="en">MercadoLibre, the largest e-commerce marketplace in Latin America, worked with four product-analysis consultancies and we were responsible for auditing them. As TL of the catalog area, I was put in charge of one of those audits.</span><span class="es">MercadoLibre trabajaba con cuatro consultoras de análisis de producto y tuvimos la responsabilidad de auditarlas. Como TL del área de catálogo, quedé a cargo de una de esas auditorías.</span></p>
+              <p><span class="en">In the consultancy I was assigned to there were four team leaders and their teams of IT analysts: more than 50 people.</span><span class="es">Respecto a la consultora con la que me tocó trabajar había cuatro líderes de equipo y sus equipos de analistas IT: más de 50 personas.</span></p>
+              <p><span class="en">The detail that added weight to the project: the results would be presented to the consultancy's CEO and PM. The objective was to compare their internal analysis against ours.</span><span class="es">El detalle que le sumaba importancia al proyecto: los resultados serían presentados al CEO y PM de la consultora. El objetivo: comparar sus análisis internos con los nuestros.</span></p>
+              
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">How it started</span><span class="es">Inicio</span></dt>
+            <dd>
+              <p><span class="en">The mission was to measure the performance of the analysts and the team leaders, and to cross that data with the project's PM on the consultancy side. Every professional would get a score matching their performance, and we would look for the improvement points for each profile.</span><span class="es">La misión fue medir la performance de los analistas y de los líderes de equipo, y cruzar esos datos con el PM del proyecto del lado de la consultora. Cada profesional tendría un score acorde a su performance y se buscarían los puntos de mejora para cada perfil.</span></p>
+              <p><span class="en">One of the main challenges was getting across to the team that our function was to find growth opportunities inside each professional, and that they shouldn't feel intruded upon.</span><span class="es">Uno de los principales retos que tuvimos fue el transmitir al equipo que nuestra función era encontrar oportunidades de crecimiento dentro de cada profesional y que no se sientan invadidos.</span></p>
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Process</span><span class="es">Proceso</span></dt>
+            <dd>
+              <p><span class="en">I designed the audit so the conclusion wouldn't depend simply on opinions: we would cross-check performance metrics, hard knowledge of the project and soft skills.</span><span class="es">Diseñé la auditoría para que la conclusión no dependiera simplemente de opiniones: se contrastarían métricas de performances, conocimientos duros del proyecto y habilidades blandas.</span></p>
+              <p><span class="en">Independent evaluation and focused cross-check: we designed an individual scoring for every analyst and lead, while the consultancy ran its own in parallel. With both evaluations closed, we crossed the data to debate only the divergences, which were minimal.</span><span class="es">Evaluación independiente y contraste enfocado: Diseñamos un scoring individual para cada analista y lead, mientras la consultora realizó el suyo en paralelo. Con ambas evaluaciones cerradas, cruzamos los datos para debatir exclusivamente las divergencias, las cuales fueron mínimas.</span></p>
+              <p class="pull"><span class="en">Independent evaluation to validate the findings: blind scoring removed the bias of mutual influence. The agreement between both scorings turned the coincidence into objective evidence, narrowing the discussion down to the discrepancies alone.</span><span class="es">Evaluación independiente para validar hallazgos: La puntuación a ciegas eliminó el sesgo de influencia mutua. La concordancia entre ambos scorings convirtió la coincidencia en evidencia objetiva, reduciendo la discusión únicamente a las discrepancias.</span></p>
+              <p><span class="en">The dynamic consisted of individual and group interviews with analysts and leaders, plus the product metrics that MercadoLibre's internal tools already generated. In parallel, I kept three things running that gave the audit its foundation: a regular cadence of meetings with the four team leaders, explicit ownership (every workstream with one clear owner) and a shared performance framework covering technical and soft skills, so all four teams were measured against the same standard.</span><span class="es">La dinámica consistió en entrevistas individuales y grupales con analistas y líderes, más las métricas de producto que ya generaban las herramientas internas de MercadoLibre. En paralelo, sostuve tres ejes que le dieron base a la auditoría: una cadencia regular de reuniones con los cuatro líderes de equipo, ownership explícito (cada workstream con un único responsable) y un marco de performance compartido que cubría habilidades técnicas y blandas, para que los cuatro equipos se midieran contra el mismo estándar.</span></p>
+              
+              
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Tools and resources</span><span class="es">Recursos y herramientas</span></dt>
+            <dd>
+              <p><span class="en"><b>Google Sheets</b> to build the scorings and cross the metrics from both evaluations. <b>Slack</b> for communication with the teams and the leaders. <b>MercadoLibre's internal tools</b> — the company's own software — for product analysis and per-team reporting.</span><span class="es"><b>Google Sheets</b> para construir los scorings y cruzar las métricas de las dos evaluaciones. <b>Slack</b> para la comunicación con los equipos y los líderes. Las <b>herramientas internas de MercadoLibre</b> — software propio de la empresa — para el análisis de producto y los informes por equipo.</span></p>
+              <p><span class="en">In 2019 AI didn't exist as a working tool. The analysis, the scoring design and the data crossing were all built by the team with the tools listed above.</span><span class="es">En 2019 no existía la IA como herramienta de trabajo. Todo el análisis, el diseño del scoring y el cruce de datos fue construido por el equipo con las herramientas detalladas.</span></p>
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Timeline</span><span class="es">Tiempos</span></dt>
+            <dd>
+              <p><span class="en">One quarter: individual and group interviews, metric collection, and crossing both scorings. The performance improvement showed up the following quarter.</span><span class="es">Un Q: entrevistas individuales y grupales, recolección de métricas y cruce de los dos scorings. La mejora de rendimiento apareció el quarter siguiente.</span></p>
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Results</span><span class="es">Resultados</span></dt>
+            <dd>
+              <p><span class="en">20% improvement in quality and volume of analysis: with metrics pulled from MercadoLibre's internal platform and consolidated in spreadsheets, both the quality and the number of products analyzed rose by 20%. That evidence supported the team restructuring: reallocating talent on performance rather than on perception.</span><span class="es">Mejora del 20% en calidad y volumen de análisis: Con métricas extraídas de la plataforma interna de MercadoLibre y consolidadas en planillas, se logró un incremento del 20% tanto en la calidad como en la cantidad de productos analizados. Esta evidencia sustentó la reestructuración de equipos: reasignación de talento basada en desempeño y no en percepciones.</span></p>
+              
+            </dd>
+          </div>
+        </dl>
+      </details>
+    </article>
+
+    <!-- ---------- CASE 02 ---------- -->
+    <article class="case">
+      <div class="case-head">
+        <div class="case-top">
+          <span class="idx">02</span>
+          <span class="mark-badge mark-acc"><span class="glyph" aria-hidden="true">&gt;</span>Accenture</span>
+          <span class="yrs">2025 – 2026</span>
+        </div>
+        <h3><span class="en">Change management: getting the most out of technology they already owned</span><span class="es">Gestión del cambio: maximizando el valor de la tecnología existente</span></h3>
+        <p class="sub"><span class="en">Deployment of a WalkMe proof of concept over SAP for a very large US client I can't name for compliance reasons.</span><span class="es">Deployment de una prueba de concepto de WalkMe sobre SAP para un cliente muy grande de Estados Unidos que por compliance no puedo nombrar.</span></p>
+        <p class="rolel"><span class="en">Change Management Consultant · co-led with a PM</span><span class="es">Consultor de Gestión del Cambio · codirigido con un PM</span></p>
+        <div class="outcome">
+          <span class="fig">88%</span>
+          <p><span class="en">Adoption among the first 100 users in the first post-launch measurement. The same report recorded −20% learning time and −18% daily workload.</span><span class="es">De adopción entre los primeros 100 usuarios en la primera medición post-lanzamiento. El mismo reporte registró −20% en tiempo de aprendizaje y −18% en carga diaria.</span></p>
+        </div>
+        <div class="bynum">
+          <h4><span class="en">By the numbers</span><span class="es">En números</span></h4>
+          <div class="numgrid">
+            <div class="num"><b>5</b><small><span class="en">processes the discovery scoped the PoC down to</span><span class="es">procesos a los que el discovery acotó la PoC</span></small></div>
+            <div class="num"><b>5</b><small><span class="en">WalkMe builds shipped to production</span><span class="es">builds de WalkMe en producción</span></small></div>
+            <div class="num"><b>3</b><small><span class="en">validation gates, each opened by a different person</span><span class="es">puertas de validación, cada una abierta por alguien distinto</span></small></div>
+            <div class="num"><b><span class="en">9 months</span><span class="es">9 meses</span></b><small><span class="en">discovery to first measurement</span><span class="es">del discovery a la primera medición</span></small></div>
+            <div class="num hero-num"><b>88%</b><small><span class="en">adoption · first 100 users</span><span class="es">de adopción · primeros 100 usuarios</span></small></div>
+            <div class="num hero-num"><b>−20% · −18%</b><small><span class="en">learning time · daily workload</span><span class="es">tiempo de aprendizaje · carga diaria</span></small></div>
+          </div>
+        </div>
+        <div class="chips">
+          <span class="chip">WalkMe</span>
+          <span class="chip">SAP</span>
+          <span class="chip">Microsoft 365</span>
+          <span class="chip"><span class="en">5 processes · 9 months</span><span class="es">5 procesos · 9 meses</span></span>
+        </div>
+      </div>
+      <details class="full">
+        <summary><span class="caret">›</span><span><span class="en">Full project</span><span class="es">Proyecto completo</span></span></summary>
+        <dl class="ledger">
+          <div class="row">
+            <dt><span class="en">Context</span><span class="es">Contexto</span></dt>
+            <dd>
+              <p><span class="en">The concrete problem: guiding new users through different processes inside SAP.</span><span class="es">El problema concreto: guiar a usuarios nuevos a través de distintos procesos dentro de SAP.</span></p>
+              <p><span class="en">The PoC had to answer two audiences with different needs: guide the end user through day-to-day operations in SAP and, at the same time, show executives the value of the tool to justify the purchase. Designing for both at once demanded balancing technical usability with the strategic view.</span><span class="es">La PoC debía responder a dos audiencias con necesidades distintas: guiar al usuario final en la operativa diaria en SAP y, al mismo tiempo, demostrar a los ejecutivos el valor de la herramienta para justificar la compra. Diseñar bajo este enfoque dual exigió balancear la usabilidad técnica con la visión estratégica.</span></p>
+              <p><span class="en">Shared leadership and strategic alignment: I led the project as a pair with a PM, splitting the operational load in equal parts and co-designing the project strategy from start to finish.</span><span class="es">Liderazgo compartido y alineación estratégica: Lideré el proyecto en dupla con un PM, dividiendo la carga operativa en partes iguales y co-diseñando la estrategia del proyecto de principio a fin.</span></p>
+              
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">How it started</span><span class="es">Inicio</span></dt>
+            <dd>
+              <p><span class="en">We started with a discovery on the client side to identify where the most friction was being generated inside SAP. Five processes came out of it.</span><span class="es">Arrancamos con un discovery del lado del cliente para identificar dónde se generaba más fricción dentro de SAP. De ahí salieron cinco procesos.</span></p>
+              <p class="pull"><span class="en">That scoping was the most important decision of the project: the real friction isn't always where the client thinks it is.</span><span class="es">Ese recorte fue la decisión más importante del proyecto: la fricción real no siempre está donde el cliente cree que está.</span></p>
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Process</span><span class="es">Proceso</span></dt>
+            <dd>
+              <p><span class="en">From end-to-end interviews with the SMEs of five key processes, we built the guides in WalkMe.</span><span class="es">A partir de entrevistas end-to-end con los SMEs de cinco procesos clave, construimos los desarrollos (builds) en WalkMe.</span></p>
+              <p><span class="en">We set up staged governance: approval from the client's PM, operational testing with the SME, and final release to production.</span><span class="es">Establecimos un esquema de gobernanza por etapas: aprobación del PM del cliente, pruebas operativas con el SME y liberación final a producción.</span></p>
+              <p class="pull"><span class="en">Our Definition of Done:<br><br>Deployment governance owned by the business: releases to production conditional on double approval — the day-to-day operator (SME) and the process owner.</span><span class="es">Nuestra Definition of Done:<br><br>Gobernanza de despliegue basada en el negocio: Pases a producción condicionados a la doble aprobación del operador cotidiano (SME) y del dueño del proceso (Process Owner).</span></p>
+              
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Tools and resources</span><span class="es">Recursos y herramientas</span></dt>
+            <dd>
+              <p><span class="en"><b>WalkMe</b> to build the five guides, over <b>SAP</b> as the target system. On the management and client-coordination side the stack was <b>Microsoft 365</b>: Teams for the SME interviews and daily communication, Outlook, and Excel and PowerPoint for discovery tracking and the executive presentations.</span><span class="es"><b>WalkMe</b> para la construcción de las cinco guías, sobre <b>SAP</b> como sistema de destino. Del lado de la gestión y la coordinación con el cliente, el stack fue <b>Microsoft 365</b>: Teams para las entrevistas con los SMEs y la comunicación diaria, Outlook, y Excel y PowerPoint para el seguimiento del discovery y las presentaciones a los ejecutivos.</span></p>
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Timeline</span><span class="es">Tiempos</span></dt>
+            <dd>
+              <p><span class="en">Nine months, from June 2025 to February 2026, my entire time at the company.</span><span class="es">Nueve meses, de junio de 2025 a febrero de 2026, toda mi estadía en la empresa.</span></p>
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Results</span><span class="es">Resultados</span></dt>
+            <dd>
+              <p><span class="en">The first measurement after going into production came back at 88% adoption among the first 100 users. In the same report, the client recorded a 20% reduction in learning time and an 18% reduction in the daily workload of key users.</span><span class="es">La primera medición después de salir a producción dio 88% de adopción entre los primeros 100 usuarios. En el mismo reporte, el cliente registró una reducción del 20% en el tiempo de aprendizaje y del 18% en la carga diaria de los usuarios clave.</span></p>
+              <p><span class="en"><b>All three numbers were measured by the client</b>, over the first batch of 100 users.</span><span class="es"><b>Los tres números los midió el cliente</b>, sobre la primera tanda de 100 usuarios.</span></p>
+              
+              
+            </dd>
+          </div>
+        </dl>
+      </details>
+    </article>
+
+    <!-- ---------- CASE 03 ---------- -->
+    <article class="case">
+      <div class="case-head">
+        <div class="case-top">
+          <span class="idx">03</span>
+          <span class="mark-badge mark-mad"><span class="glyph" aria-hidden="true">⌖</span>Madiba</span>
+          <span class="yrs">2026</span>
+        </div>
+        <h3><span class="en">The risk of centralized efficiency: when the operation depends on one person</span><span class="es">El riesgo de la eficiencia centralizada: cuando la operación depende de una sola persona</span></h3>
+        <p class="sub"><span class="en">Organizational diagnostic and automation: the tools and technology they had bought were fully operational, but they carried a critical bottleneck — absolute dependence on the founder. The project turned that centralized setup into an autonomous, scalable system of processes.</span><span class="es">Diagnóstico organizacional y automatización: Las herramientas y la tecnología adquiridas eran totalmente operativas, pero sufrían un cuello de botella crítico: la dependencia absoluta del fundador. El proyecto transformó ese esquema centralizado en un sistema de procesos autónomo y escalable.</span></p>
+        <p class="rolel"><span class="en">AI Consultant · my own consulting practice</span><span class="es">Consultor de IA · mi propia práctica de consultoría</span></p>
+        <div class="outcome">
+          <span class="fig">2 h → 10 min</span>
+          <p><span class="en">Per valuation. The form triggers the automation: it assembles the document, exports the PDF and leaves the email as a draft to review before sending.</span><span class="es">Por tasación. El formulario dispara la automatización: arma el documento, exporta el PDF y deja el mail en borrador para revisar antes de enviarlo.</span></p>
+        </div>
+        <div class="bynum">
+          <h4><span class="en">By the numbers</span><span class="es">En números</span></h4>
+          <div class="numgrid">
+            <div class="num"><b>26 / 9</b><small><span class="en">questions in 9 blocks — my own diagnostic instrument</span><span class="es">preguntas en 9 bloques — instrumento de diagnóstico propio</span></small></div>
+            <div class="num"><b>70–100</b><small><span class="en">weekly WhatsApp inquiries with no process and no record</span><span class="es">consultas semanales por WhatsApp sin proceso ni registro</span></small></div>
+            <div class="num"><b>0</b><small><span class="en">documented processes and metrics at the baseline</span><span class="es">procesos documentados y métricas en la línea de base</span></small></div>
+            <div class="num"><b>6 · 3</b><small><span class="en">baseline metrics · prioritized initiatives, each with indicator and price</span><span class="es">métricas de línea de base · iniciativas priorizadas, con indicador y precio</span></small></div>
+            <div class="num"><b><span class="en">3 weeks</span><span class="es">3 semanas</span></b><small><span class="en">10 days diagnostic + 1 week build</span><span class="es">10 días de diagnóstico + 1 semana de build</span></small></div>
+            <div class="num hero-num"><b>2 h → 10 min</b><small><span class="en">per valuation</span><span class="es">por tasación</span></small></div>
+          </div>
+        </div>
+        <div class="chips">
+          <span class="chip">Make.com</span>
+          <span class="chip">Claude API</span>
+          <span class="chip">Google Workspace</span>
+          <span class="chip">Tokko Broker</span>
+          <span class="chip"><span class="en">El Espejo · El Mapa (own instruments)</span><span class="es">El Espejo · El Mapa (instrumentos propios)</span></span>
+        </div>
+      </div>
+      <details class="full">
+        <summary><span class="caret">›</span><span><span class="en">Full project</span><span class="es">Proyecto completo</span></span></summary>
+        <dl class="ledger">
+          <div class="row">
+            <dt><span class="en">Context</span><span class="es">Contexto</span></dt>
+            <dd>
+              <p><span class="en">Digitalization and operational integration for a real estate firm: CRM, WhatsApp Business, paid media and standardized valuations in Canva, complemented with generative AI for listing images and copy.</span><span class="es">Digitalización e integración operativa para firma inmobiliaria: Implementación de CRM, WhatsApp Business, pauta digital y estandarización de tasaciones en Canva, complementados con IA generativa para la creación de imágenes y copys de catálogo.</span></p>
+              <p class="pull"><span class="en">From individual skill to organizational capability. The tools worked, but under a critical dependency: every technology had come in as a personal skill of the founder's, not as a structured process of the business.</span><span class="es">De habilidad individual a capacidad organizacional. Las herramientas funcionaban, pero bajo una dependencia crítica: cada tecnología ingresó como una destreza personal del fundador y no como un proceso estructurado del negocio.</span></p>
+              <p><span class="en">Initial diagnosis and starting point: 70 to 100 inquiries a week over WhatsApp with no traceability, no documented processes and no management metrics. Faced with the client's request to implement AI, the first step was to structure the operating base that would make those tools viable.</span><span class="es">Diagnóstico inicial y punto de partida: Recepción de 70 a 100 consultas semanales vía WhatsApp sin trazabilidad, procesos documentados ni métricas de gestión. Ante el pedido del cliente de implementar IA, el primer paso fue estructurar la base operativa para hacer viables las herramientas.</span></p>
+              
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">How it started</span><span class="es">Inicio</span></dt>
+            <dd>
+              <p><span class="en">Diagnosis before implementation: before defining any technology, I structured the assessment with an instrument of my own — 26 questions across 9 strategic blocks (standard, validation and exploratory) to map operational maturity.</span><span class="es">Diagnóstico previo a la implementación: Antes de definir la tecnología, estructuré el relevamiento con un instrumento propio: 26 preguntas distribuidas en 9 bloques estratégicos (clasificadas en estándar, de validación y exploratorias) para mapear la madurez operativa.</span></p>
+              <p><span class="en">Diagnosing blind spots: the validation questions go beyond gathering context; they surface the inefficiencies the founder hasn't identified. Among them, the baseline question measures the real operational load by calculating the monthly hours invested (time per task × monthly frequency × owner).</span><span class="es">Diagnóstico de puntos ciegos (blind spots): Las preguntas de validación van más allá de recopilar contexto; revelan las ineficiencias no identificadas por el fundador. Entre ellas, la pregunta de línea de base mide la carga operativa real calculando las horas mensuales invertidas (tiempo por tarea × frecuencia mensual × responsable).</span></p>
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Process</span><span class="es">Proceso</span></dt>
+            <dd>
+              <p><span class="en"><b>El Espejo</b> (diagnostic deliverable): a structured, prioritized map of the business, descriptive by design. Under a traceability principle, every statement is backed directly by the founder's own quotes. Delivered asynchronously, ahead of the second session.</span><span class="es"><b>El Espejo</b> (entregable de diagnóstico): mapeo estructurado y jerarquizado del negocio, con foco en lo descriptivo. Bajo el principio de trazabilidad, cada afirmación se respalda directamente en citas textuales del fundador. Se entrega de forma asincrónica previa a la segunda sesión.</span></p>
+              <p><span class="en"><b>El Mapa</b> — the deliverable that comes after that validation. It integrates the maturity model, the interconnected bottlenecks, 6 baseline metrics and 3 prioritized initiatives (each with its closing KPI and its price). It runs on reverse traceability: no solution gets in unless it answers a diagnosed problem.</span><span class="es"><b>El Mapa</b> — entregable posterior a la validación. Integra el modelo de madurez, los cuellos de botella interconectados, 6 métricas de línea de base y 3 iniciativas priorizadas (cada una con su KPI de cierre y cotización). Se rige por la trazabilidad inversa: ninguna solución entra si no responde directamente a un problema diagnosticado.</span></p>
+              <p><span class="en">Three prioritized strategic initiatives:<br><br>1- WhatsApp inquiry protocol: resolving the main operational bottleneck and the prerequisite for the rest of the roadmap.<br><br>2- Standardizing the valuation process: systematizing the property valuation flow.<br><br>3- Activating social media: strategy and implementation of digital acquisition channels.</span><span class="es">Tres iniciativas estratégicas priorizadas:<br><br>1- Protocolo de atención en WhatsApp: resolución del principal cuello de botella operativo y prerrequisito de la hoja de ruta.<br><br>2- Estandarización del proceso de tasación: sistematización del flujo de valoración de inmuebles.<br><br>3- Activación de redes sociales: estrategia e implementación de canales digitales de captación.</span></p>
+              
+              
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Tools and resources</span><span class="es">Recursos y herramientas</span></dt>
+            <dd>
+              <p><span class="en">The diagnostic instruments: "El Espejo" and "El Mapa"</span><span class="es">Los instrumentos de diagnóstico: "El Espejo" y "El Mapa"</span></p>
+              <p><span class="en">The build is an end-to-end flow assembled on <b>Make.com</b> as the orchestrator, with <b>Google Forms</b> for data capture, the <b>Claude API</b> called over raw HTTP for the drafting, <b>Google Docs</b> for document assembly, <b>Google Maps Static</b> for the embedded property map, <b>Google Drive</b> for the PDF export, and <b>Gmail</b> to leave the email ready as a draft. The form triggers the automation and the rest runs on its own up to the draft.</span><span class="es">La construcción es un flujo end-to-end armado sobre <b>Make.com</b> como orquestador, con <b>Google Forms</b> para la carga de datos, la <b>API de Claude</b> llamada por HTTP crudo para la redacción, <b>Google Docs</b> para el armado del documento, <b>Google Maps Static</b> para el mapa embebido de la propiedad, <b>Google Drive</b> para la exportación a PDF y <b>Gmail</b> para dejar el mail listo como borrador. El formulario dispara la automatización y el resto corre solo hasta el borrador.</span></p>
+              <p class="pull"><span class="en">A person reviews and sends. The human step is part of the design.</span><span class="es">La persona revisa y envía. El paso humano es parte del diseño.</span></p>
+              
+              
+              
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Timeline</span><span class="es">Tiempos</span></dt>
+            <dd>
+              <p><span class="en">End to end, three weeks.</span><span class="es">Punta a punta, tres semanas.</span></p>
+              
+            </dd>
+          </div>
+          <div class="row">
+            <dt><span class="en">Results</span><span class="es">Resultados</span></dt>
+            <dd>
+              <p><span class="en">The diagnostic was validated in full. What it left documented: the map of chained bottlenecks, the six baseline metrics, and the three prioritized initiatives with indicator and price.</span><span class="es">El diagnóstico se validó en su totalidad. Quedó documentado el mapa de cuellos encadenados, las seis métricas de línea de base y las tres iniciativas priorizadas con indicador y precio.</span></p>
+              
+              
+            </dd>
+          </div>
+        </dl>
+      </details>
+    </article>
+  </section>
+
+  <!-- ===================== BUILDS ===================== -->
+  <section id="builds">
+    <div class="sechead">
+      <span class="num">02</span>
+      <h2><span class="en">Builds</span><span class="es">Builds</span></h2>
+    </div>
+    <p class="lead prose"><span class="en">Of the solutions here, two are deployed in real business environments and the third one is the operating system of my own consulting practice.</span><span class="es">Entre las soluciones presentadas, dos están desplegadas en entornos reales de negocio y la tercera funciona como el sistema operativo de mi propia consultoría.</span></p>
+
+    <!-- BUILD 1 -->
+    <article class="build">
+      <h3><span class="en">Property valuation flow</span><span class="es">Flujo de tasación de propiedades</span></h3>
+      <p class="thesis-line"><span class="en">From two hours to an automatic draft: the valuation process — two hours of pulling comparables by hand, writing and assembling the report — came down to filling in a form. The automation compiles the data and generates an email draft ready for a final review.</span><span class="es">De 2 horas a un borrador automático: El proceso de tasación —que exigía dos horas de búsqueda manual de comparables, redacción e informes— se redujo a la carga de un formulario. La automatización compila los datos y genera un borrador de email listo para revisión final.</span></p>
+      <div class="flow" aria-label="Google Forms, Claude API, JSON, Google Docs, Maps, Drive PDF, Gmail draft, human gate">
+        <span>Google Forms</span><i>→</i><span>Claude API<br>(HTTP)</span><i>→</i><span>JSON</span><i>→</i><span>Google Docs</span><i>→</i><span>Maps Static</span><i>→</i><span>Drive PDF</span><i>→</i><span>Gmail draft</span><i>→</i><span class="human"><span class="en">HUMAN GATE</span><span class="es">PUERTA HUMANA</span></span>
+      </div>
+      <p class="meta"><span class="en"><b>Make.com</b> · Claude API · Google Workspace &nbsp;·&nbsp; one week to build</span><span class="es"><b>Make.com</b> · Claude API · Google Workspace &nbsp;·&nbsp; una semana de construcción</span></p>
+    </article>
+
+    <!-- BUILD 2 -->
+    <article class="build">
+      <h3><span class="en">AI marketing + leadership enablement: automating the workflow and training the owner</span><span class="es">Marketing con IA + Habilitación de Liderazgo: Automatización del flujo y formación directiva</span></h3>
+      <p class="thesis-line"><span class="en">87% less management time (from 8h to 1h): built and deployed an AI agent for planning and running marketing, together with training the owner to guarantee adoption and operational autonomy.</span><span class="es">Reducción del 87% en tiempo de gestión (de 8h a 1h): Desarrollo e implementación de un agente de IA para la planificación y ejecución de marketing, complementado con la capacitación de la dueña para garantizar la adopción y autonomía operativa.</span></p>
+      <p class="meta"><span class="en"><b>Claude</b> &nbsp;·&nbsp; discovery sessions to find where the repetitive work actually sat &nbsp;·&nbsp; Client: Magnolias</span><span class="es"><b>Claude</b> &nbsp;·&nbsp; sesiones de discovery para encontrar dónde estaba el trabajo repetitivo &nbsp;·&nbsp; Cliente: Magnolias</span></p>
+      <details>
+        <summary><span class="caret">›</span><span><span class="en">Value and business impact</span><span class="es">Valor e impacto en el negocio</span></span></summary>
+        <div class="body">
+          <p><span class="en">The real success indicator wasn't only the time saved (from 8 hours to 1), but the client's full independence: she runs the solution herself today, and has even adapted it for use cases that weren't part of the original scope.</span><span class="es">El verdadero indicador de éxito no fue solo optimizar el tiempo (de 8 a 1 hora), sino lograr la total independencia del cliente: hoy opera la solución de forma autónoma e incluso la adaptó para resolver casos de uso que no formaban parte del alcance original.</span></p>
+        </div>
+      </details>
+    </article>
+
+    <!-- BUILD 6 -->
+    <article class="build">
+      <h3>WAT — Workflows, Agents, Tools</h3>
+      <p class="thesis-line"><span class="en">An architecture where the AI thinks and the code executes. The system runs on a manual of instructions: the AI decides which step to take depending on the situation, and specific programs carry out the task. That's how we keep the AI from inventing data or losing the thread as the process gets more complex.</span><span class="es">Una arquitectura donde IA piensa y el código ejecuta. El sistema funciona con un manual de instrucciones: la IA decide qué paso dar según la situación y programas específicos realizan la tarea. De esta forma, evitamos que la IA se invente datos o pierda el hilo a medida que el proceso se vuelve más complejo.</span></p>
+      <p class="meta"><span class="en"><b>Claude Code</b> · Python · markdown SOPs &nbsp;·&nbsp; in daily use since 2026</span><span class="es"><b>Claude Code</b> · Python · SOPs en markdown &nbsp;·&nbsp; en uso diario desde 2026</span></p>
+      <details>
+        <summary><span class="caret">›</span><span><span class="en">The arithmetic behind it</span><span class="es">La aritmética que lo explica</span></span></summary>
+        <div class="body">
+          <p><span class="en">If each step of a process is 90% accurate, five steps leave you at 59%. That's the whole argument for pushing execution down into scripts that do the same thing every time, and leaving the model to decide which script to call and when.</span><span class="es">Si cada paso de un proceso es 90% preciso, cinco pasos te dejan en 59%. Ese es todo el argumento para empujar la ejecución hacia scripts que hacen lo mismo siempre, y dejarle al modelo decidir qué script llamar y cuándo.</span></p>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <!-- ===================== WHO I AM ===================== -->
+  <section id="who">
+    <div class="sechead">
+      <span class="num">03</span>
+      <h2><span class="en">Who I am</span><span class="es">Quién soy</span></h2>
+    </div>
+
+    <div class="whogrid">
+      <div>
+        <p class="lead prose" style="margin-top:22px"><span class="en">Thanks for making it this far!<br><br>A bit about me. On the personal side, I'm passionate about sport (football and Hyrox), reading (my 2026 favorites: Long Walk to Freedom and Never Let Me Go) and spending time with family and friends. Whenever I can, I escape to travel; the most adventurous one was probably getting to Everest Base Camp.<br><br>On the professional side, I keep learning: I started out as a sports journalist, graduated in Communication Studies and added a postgraduate degree in Corporate Communication. Across my project management career I've been part of the teams at two leading technology companies: MercadoLibre and Accenture.</span><span class="es">¡Gracias por llegar hasta acá!<br><br>Te cuento un poco sobre mí. En lo personal, me apasiona el deporte (fútbol y Hyrox), la lectura (mis favoritos de 2026: Largo camino hacia la libertad y Nunca me abandones) y compartir tiempo con mi familia y amigos. Siempre que puedo me escapo a viajar; probablemente la experiencia más aventurera haya sido llegar a la base del Everest.<br><br>A nivel profesional, mantengo una búsqueda de formación continua: me inicié como periodista deportivo, me gradué en Comunicación Social y sumé un posgrado en Comunicación Corporativa. En mi trayectoria de gestión de proyectos, integré los equipos de dos tecnológicas referentes: MercadoLibre y Accenture.</span></p>
+        <p class="seeking"><span class="en">After a year running transformations project by project as an independent consultant, I want to bring that know-how inside an organization. My goal is to join a team in a remote role in AI Adoption, Digital Transformation or Change Management, with regional (LATAM) or global scope</span><span class="es">Tras un año ejecutando transformaciones proyecto por proyecto como consultor independiente, busco volcar este know-how dentro de una organización. Mi objetivo es sumarme a un equipo en un rol remoto de Adopción de IA, Transformación Digital o Gestión del Cambio, con alcance regional (LATAM) o global</span></p>
+
+        <h4 class="offlabel"><span class="en">Off the clock</span><span class="es">Fuera del horario</span></h4>
+        <div class="photorow">
+          <figure class="shot" style="margin:0">
+            <img src="assets/img/lauti-everest.jpg" alt="Lautaro Tapia en el campo base del Everest con una camiseta argentina">
+            <figcaption><span class="en">Everest Base Camp</span><span class="es">Campo base del Everest</span></figcaption>
+          </figure>
+          <figure class="shot" style="margin:0">
+            <img src="assets/img/lauti-colon.jpg" alt="Lautaro Tapia con su padre en el Teatro Colón, Buenos Aires">
+            <figcaption><span class="en">With my dad, Teatro Colón</span><span class="es">Con mi viejo, Teatro Colón</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="mediarow">
+          <figure class="shot" style="margin:0">
+            <img src="assets/img/lauti-greatocean.jpg" alt="Lautaro Tapia en una playa entre acantilados en Australia">
+            <figcaption><span class="en">Australia · 2020</span><span class="es">Australia · 2020</span></figcaption>
+          </figure>
+          <figure class="shot" style="margin:0">
+            <video controls playsinline preload="metadata" poster="assets/video/lauti-brigada-poster.jpg">
+              <source src="assets/video/lauti-brigada.mp4" type="video/mp4">
+            </video>
+            <figcaption><span class="en">Fire brigade training · Australia</span><span class="es">Entrenamiento de brigada de incendios · Australia</span></figcaption>
+          </figure>
+        </div>
+
+        <!-- OCULTO 15/10: vuelve cuando esté grabado el video de dos minutos.
+             Para mostrarlo de nuevo, sacar esta línea de comentario y la de abajo.
+        <div class="videoslot">
+          <b><span class="en">Video — two minutes, to camera</span><span class="es">Video — dos minutos, a cámara</span></b>
+          <small><span class="en">How I diagnose before I build: the instrument, the trap questions, the gate. To record 15–17 Oct.</span><span class="es">Cómo diagnostico antes de construir: el instrumento, las preguntas trampa, la puerta. A grabar 15–17/10.</span></small>
+        </div>
+        -->
+      </div>
+
+      <aside class="pcard">
+        <figure class="pcard-shot">
+          <img src="assets/img/lauti-pilbara.jpg" alt="Lautaro Tapia con casco y ropa de trabajo en una operación minera en Australia">
+          <figcaption><span class="en">Iron ore operation, Western Australia</span><span class="es">Iron ore operation, Western Australia</span></figcaption>
+        </figure>
+        <div class="pc-body">
+          <dl>
+            <div><dt><span class="en">Based in</span><span class="es">Vivo en</span></dt><dd>Buenos Aires, Argentina</dd></div>
+            <div><dt><span class="en">Work setup</span><span class="es">Modalidad</span></dt><dd><span class="en">Open to remote work — LATAM and international</span><span class="es">Abierto a trabajar en remoto — LATAM e internacional</span></dd></div>
+            <div><dt><span class="en">Education</span><span class="es">Formación</span></dt><dd><span class="en">Postgraduate, Corporate Communication · BA Communication Science (UADE) · Sports journalism (ETER)</span><span class="es">Posgrado en Comunicación Corporativa · Lic. en Ciencias de la Comunicación (UADE) · Periodismo deportivo (ETER)</span></dd></div>
+            <div><dt><span class="en">Languages</span><span class="es">Idiomas</span></dt><dd><span class="en">Spanish native · English C1 · Portuguese B2</span><span class="es">Español nativo · Inglés C1 · Portugués B2</span></dd></div>
+            <div><dt><span class="en">Direct</span><span class="es">Directo</span></dt><dd>
+              <a href="mailto:lautaro.tapia@gmail.com">lautaro.tapia@gmail.com</a><br>
+              <a href="tel:+5491138001991">+54 9 11 3800 1991</a><br>
+              <a href="https://www.linkedin.com/in/lautaro-tapia" target="_blank" rel="noopener">LinkedIn</a>
+            </dd></div>
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience">
+    <div class="sechead">
+      <span class="num">04</span>
+      <h2><span class="en">Experience</span><span class="es">Experiencia</span></h2>
+      <span class="aside"><span class="en">eight years</span><span class="es">ocho años</span></span>
+    </div>
+    <p class="lead prose"><span class="en">Delivery and adoption tend to be managed as two separate problems: a platform goes live on schedule and the team keeps working the way it did before. <strong>My work sits on that seam</strong> — the validation gates, the training and the change strategy that turn a deployment into the way people actually operate.</span><span class="es">La mayoría de las implementaciones de IA se estancan porque las organizaciones se enfocan en la herramienta y no en el equipo que la usa. <strong>Mi trabajo es cerrar esa brecha</strong>: relevo procesos, construyo automatizaciones —hoy casi siempre con IA— y diseño la estrategia de adopción que hace que el equipo las incorpore.</span></p>
+
+    <div class="jobs">
+      <article class="job">
+        <div class="when"><span class="en">Dec 2025 — present<small>Freelance</small></span><span class="es">Dic 2025 — presente<small>Freelance</small></span></div>
+        <div>
+          <h3><span class="en">Organizational Development Consultant</span><span class="es">Consultor de Desarrollo Organizacional</span></h3>
+          <p class="co"><span class="en">Madiba · Consulting · AI transformation</span><span class="es">Madiba · Consultoría · Transformación con IA</span></p>
+          <ul>
+            <li><span class="en">With founders and managers I diagnose where the business stands on AI: what is already in use, which processes could be optimized, and which solutions would return the most value. The methodology rests on two instruments of my own — El Espejo, which maps the business cross-functionally, and El Mapa, which sets where it is heading and prices each move in hours returned per month.</span><span class="es">Con fundadores y gerentes diagnostico dónde está parado el negocio frente a la IA: qué se usa, qué procesos se podrían optimizar y cuáles son las soluciones que aportarían mayor valor. La metodología se basa en dos instrumentos propios: El Espejo, que mapea el negocio transversalmente, y El Mapa, que fija hacia dónde va y cuánto vale cada movimiento en horas/mes recuperadas.</span></li>
+            <li><span class="en">On every automation I have two missions: building it, and creating the adoption strategy. A quotation flow went from 2 hours to 10 minutes; a marketing agent turned a full day of manual work into about an hour; a Python engine assembled a sales pipeline from records a team already keeps; a ClickUp ecosystem replaced ad-hoc coordination.</span><span class="es">En cada automatización tengo dos misiones: construirla y crear la estrategia de adopción. Un flujo de cotizaciones bajó de 2 horas a 10 minutos; un agente de marketing convirtió un día de trabajo manual en cerca de una hora; un motor en Python armó el pipeline comercial a partir de los registros que el equipo ya lleva; un ecosistema en ClickUp reemplazó la coordinación ad-hoc.</span></li>
+            <li><span class="en">I convert tacit knowledge into operating systems: the criteria a founder applies by instinct and the decisions that never reached a procedure get worked into documented workflows. That is the layer most AI adoptions skip, and why they stall.</span><span class="es">Convierto conocimiento tácito en sistemas operativos: los criterios que un fundador aplica por instinto, y las decisiones que nunca llegaron a un procedimiento, los trabajo hasta volverlos flujos documentados. Es la capa que la mayoría de las adopciones de IA se saltea, y por eso se estancan.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">2025 — 2026<small>Buenos Aires</small></div>
+        <div>
+          <h3><span class="en">Change Management Consultant</span><span class="es">Consultor de Gestión del Cambio</span></h3>
+          <p class="co"><span class="en">Accenture · Consulting · SAP / WalkMe</span><span class="es">Accenture · Consultoría · SAP / WalkMe</span></p>
+          <ul>
+            <li><span class="en">Co-led a nine-month WalkMe proof-of-concept deployment over SAP with a second PM, sharing the workload and the strategy — the client measured a 20% reduction in employee learning time.</span><span class="es">Codirigí junto a otro PM el deployment de una PoC de WalkMe sobre SAP durante nueve meses, compartiendo la carga de trabajo y la estrategia — el cliente midió una reducción del 20% en el tiempo de aprendizaje de los empleados.</span></li>
+            <li><span class="en">Ran the client-side discovery that scoped the PoC to five processes, identifying where friction actually sat inside SAP; the same client report recorded an 18% reduction in daily workload time for key business users.</span><span class="es">Conduje el discovery del lado del cliente que acotó la PoC a cinco procesos, identificando dónde estaba la fricción real dentro de SAP; el mismo reporte del cliente registró una reducción del 18% en el tiempo de trabajo diario de usuarios clave.</span></li>
+            <li><span class="en">Built the rollout and adoption strategy on a three-gate validation chain (client PM → process SME → production), reaching 88% adoption among the first 100 users in the client's first post-launch measurement.</span><span class="es">Armé la estrategia de rollout y adopción sobre una cadena de validación de tres puertas (PM del cliente → SME del proceso → producción), alcanzando un 88% de adopción entre los primeros 100 usuarios en la primera medición post-lanzamiento del cliente.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">2024 — 2025<small>Australia</small></div>
+        <div>
+          <h3><span class="en">Team Leader</span><span class="es">Líder de Equipo</span></h3>
+          <p class="co"><span class="en">SRG Skilled Resources · Industrial / Mining</span><span class="es">SRG Skilled Resources · Industrial / Minería</span></p>
+          <ul>
+            <li><span class="en">Led teams in high-risk, safety-critical mining environments across BHP and FMG operations, delivering projects under strict operational and safety standards in remote, high-pressure settings.</span><span class="es">Lideré equipos en entornos mineros de alto riesgo y seguridad crítica en operaciones de BHP y FMG, ejecutando proyectos bajo estrictos estándares operativos y de seguridad en entornos remotos y de alta presión.</span></li>
+            <li><span class="en">Strengthened leadership and execution capabilities in multicultural, performance-driven environments.</span><span class="es">Fortalecí capacidades de liderazgo y ejecución en entornos multiculturales orientados al rendimiento.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">2020 — 2023<small>Australia</small></div>
+        <div>
+          <h3><span class="en">Construction &amp; Trades</span><span class="es">Construcción y Oficios</span></h3>
+          <p class="co"><span class="en">Multiple sites · Construction · Carpentry &amp; Metals</span><span class="es">Varios sitios · Construcción · Carpintería y Metales</span></p>
+          <ul>
+            <li><span class="en">Hands-on execution across construction and industrial trades at multiple Australian sites. Five years in Australia expanded how I read teams made up of people from different cultures.</span><span class="es">Ejecución hands-on en construcción y oficios industriales en múltiples sitios de Australia. Cinco años allá expandieron mi lectura de cómo trabajan en conjunto equipos de culturas distintas.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">2018 — 2020<small>Buenos Aires</small></div>
+        <div>
+          <h3><span class="en">Senior Product Team Leader</span><span class="es">Líder Senior de Equipo de Producto</span></h3>
+          <p class="co"><span class="en">MercadoLibre · Marketplace · IT Consulting</span><span class="es">MercadoLibre · Marketplace · Consultoría IT</span></p>
+          <ul>
+            <li><span class="en">Coordinated 4 team leaders and multiple IT analyst teams, ensuring alignment across workstreams and that delivery targets were met.</span><span class="es">Coordiné 4 líderes de equipo y múltiples equipos de analistas IT, asegurando alineación entre workstreams y cumplimiento de objetivos de entrega.</span></li>
+            <li><span class="en">Led a one-month performance audit of an external consultancy (4 team leaders, 50+ IT analysts), designing technical and soft-skills evaluation frameworks scored independently by both sides before comparison — performance improved 20% the following quarter.</span><span class="es">Dirigí durante un mes la auditoría de desempeño de una consultora externa (4 líderes de equipo, +50 analistas IT), con marcos de evaluación técnica y de habilidades blandas puntuados de forma independiente por ambas partes antes de cruzarlos — el rendimiento mejoró 20% el quarter siguiente.</span></li>
+            <li><span class="en">Reorganized team structures and resource allocation based on performance insights, improving delivery effectiveness and coordination.</span><span class="es">Reorganicé estructuras de equipo y asignación de recursos según los resultados, mejorando efectividad de entrega y coordinación.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">2011<small>Buenos Aires</small></div>
+        <div>
+          <h3><span class="en">Journalist</span><span class="es">Periodista</span></h3>
+          <p class="co"><span class="en">Clarín · Newsroom · provincial and national desk</span><span class="es">Clarín · Redacción · noticias provinciales y nacionales</span></p>
+          <ul>
+            <li><span class="en">My first job in journalism, covering provincial and national news for Argentina's largest newspaper. Trained as a sports journalist at ETER.</span><span class="es">Mi primera experiencia como periodista, cubriendo noticias provinciales y nacionales en el diario más grande de la Argentina. Formación en periodismo deportivo en ETER.</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== TOOLKIT ===================== -->
+  <section id="toolkit">
+    <div class="sechead">
+      <span class="num">05</span>
+      <h2><span class="en">Toolkit &amp; background</span><span class="es">Herramientas y formación</span></h2>
+    </div>
+    <div class="grid2">
+      <div class="cell" style="grid-column:1/-1">
+        <h4><span class="en">Diagnosis &amp; change</span><span class="es">Diagnóstico y cambio</span></h4>
+        <div class="taglist">
+          <span><span class="en">Organizational diagnostic</span><span class="es">Diagnóstico organizacional</span></span>
+          <span><span class="en">Change management &amp; training</span><span class="es">Gestión del cambio y capacitación</span></span>
+          <span><span class="en">Adoption strategy</span><span class="es">Estrategia de adopción</span></span>
+          <span><span class="en">Discovery interviews</span><span class="es">Entrevistas de discovery</span></span>
+          <span><span class="en">Digital adoption (SAP · WalkMe)</span><span class="es">Adopción digital (SAP · WalkMe)</span></span>
+        </div>
+
+        <h4 style="margin-top:22px"><span class="en">Process &amp; AI</span><span class="es">Procesos e IA</span></h4>
+        <div class="taglist">
+          <span><span class="en">Process design &amp; automation</span><span class="es">Diseño de procesos y automatización</span></span>
+          <span><span class="en">AI-driven process optimization</span><span class="es">Optimización de procesos con IA</span></span>
+          <span><span class="en">Agent &amp; workflow design</span><span class="es">Diseño de agentes y workflows</span></span>
+          <span><span class="en">SOPs from tacit knowledge</span><span class="es">SOPs a partir de conocimiento tácito</span></span>
+          <span><span class="en">Prompt &amp; schema design</span><span class="es">Diseño de prompts y esquemas</span></span>
+        </div>
+
+        <h4 style="margin-top:22px"><span class="en">Delivery &amp; governance</span><span class="es">Delivery y gobernanza</span></h4>
+        <div class="taglist">
+          <span><span class="en">Scope, dependencies &amp; risk</span><span class="es">Alcance, dependencias y riesgo</span></span>
+          <span><span class="en">Validation gates</span><span class="es">Puertas de validación</span></span>
+          <span><span class="en">Roadmap &amp; prioritization</span><span class="es">Roadmap y priorización</span></span>
+          <span><span class="en">Vendor &amp; integrator governance</span><span class="es">Gestión de proveedores e integradores</span></span>
+          <span><span class="en">Cross-functional team orchestration</span><span class="es">Coordinación de equipos multifuncionales</span></span>
+        </div>
+      </div>
+      <div class="cell">
+        <h4><span class="en">What I build with</span><span class="es">Con qué construyo</span></h4>
+        <p class="stack">
+          <b>Claude API</b> · <b>Claude Code</b> · Anthropic SDK · <b>Python</b> · <b>Make.com</b> · Google Workspace · VS Code · Notion · ClickUp · WalkMe · SAP · Microsoft 365
+        </p>
+        <h4 style="margin-top:22px"><span class="en">Own instruments</span><span class="es">Instrumentos propios</span></h4>
+        <p class="stack"><span class="en"><b>El Espejo</b> — cross-functional diagnostic, quote-backed<br> <b>El Mapa</b> — maturity model, bottlenecks, priced initiatives<br> <b>WAT</b> — my own workflows / agents / tools system</span><span class="es"><b>El Espejo</b> — diagnóstico transversal, respaldado con citas<br> <b>El Mapa</b> — modelo de madurez, cuellos, iniciativas con precio<br> <b>WAT</b> — mi sistema propio de workflows, agentes y herramientas</span></p>
+      </div>
+      <div class="cell">
+        <h4><span class="en">Education &amp; certifications</span><span class="es">Educación y certificaciones</span></h4>
+        <div class="deflist">
+          <div>
+            <b><span class="en">Postgraduate Degree in Corporate Communication</span><span class="es">Posgrado en Comunicación Corporativa</span></b>
+            <small>UADE · 2019</small>
+          </div>
+          <div>
+            <b><span class="en">Bachelor's Degree in Communication Science</span><span class="es">Licenciatura en Ciencias de la Comunicación</span></b>
+            <small>UADE · 2017</small>
+          </div>
+          <div>
+            <b>PMP</b>
+            <small><span class="en">In progress — 2026</span><span class="es">En curso — 2026</span></small>
+          </div>
+          <div>
+            <b><span class="en">Project Management Foundations · Strategic Planning Foundations</span><span class="es">Fundamentos de Project Management · Fundamentos de Planificación Estratégica</span></b>
+            <small>2025</small>
+          </div>
+        </div>
+      </div>
+      <div class="cell wide">
+        <h4><span class="en">Languages</span><span class="es">Idiomas</span></h4>
+        <div class="langbars">
+          <div class="langbar">
+            <b><span class="en">Spanish</span><span class="es">Español</span></b><small><span class="en">Native</span><span class="es">Nativo</span></small>
+            <div class="dots" role="img" aria-label="5/5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+          </div>
+          <div class="langbar">
+            <b><span class="en">English</span><span class="es">Inglés</span></b><small><span class="en">C1 — Advanced</span><span class="es">C1 — Avanzado</span></small>
+            <div class="dots" role="img" aria-label="4/5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+          </div>
+          <div class="langbar">
+            <b><span class="en">Portuguese</span><span class="es">Portugués</span></b><small><span class="en">B2 — Upper intermediate</span><span class="es">B2 — Intermedio alto</span></small>
+            <div class="dots" role="img" aria-label="3/5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+          </div>
+        </div>
+        <h4 style="margin-top:22px"><span class="en">Where I've worked from</span><span class="es">Desde dónde trabajé</span></h4>
+        <p class="stack"><span class="en">Argentina · Australia (2020 – 2025) · remote with US and LATAM teams</span><span class="es">Argentina · Australia (2020 – 2025) · remoto con equipos de EE.UU. y LATAM</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <!-- ===================== REVIEWS ===================== -->
+  <section id="reviews">
+    <div class="sechead">
+      <span class="num">06</span>
+      <h2><span class="en">Reviews</span><span class="es">Testimonios</span></h2>
+    </div>
+
+    <figure class="quote">
+      <blockquote><span class="en">Having worked with Lautaro for only a few months, I want to highlight his professionalism — and that he has been an excellent colleague. In his role as a Consultant, Lautaro took on responsibilities and carried them through to their goal, supported the client interactions and kept materials and the team consistently organized and up to date. His interpersonal skills, especially his ability to empathize with the client, were key to getting past the project's challenges in such a short timeframe. He managed to learn a technical product and adapt to the client's demanding way of working. I want to stress that in critical moments he kept a strong commitment and always met expectations</span><span class="es">Habiendo trabajado con Lautaro por apenas unos meses, destaco su profesionalidad sin dejar de mencionar que ha sido un excelente colega. En su rol como Consultor, Lautaro asumió responsabilidades y las llevó correctamente a su objetivo, apoyó las interacciones con el cliente y manteniendo materiales y equipo organizado y actualizados de manera consistente. Las habilidades interpersonales de Lautaro, especialmente su capacidad para empatizar con el cliente, fueron clave para superar los desafíos del proyecto en un plazo tan corto. Logró aprender un producto técnico y adaptarse al exigente enfoque de trabajo del cliente. Remarco que en momentos críticos, mantuvo un fuerte compromiso y cumplió siempre con las expectativas</span></blockquote>
+      <figcaption>
+        <b>Julio Ruano</b>
+        <span><span class="en">Manager at Accenture</span><span class="es">Manager en Accenture</span></span>
+      </figcaption>
+      <p class="qsrc"><span class="en">Translated from the Spanish original</span></p>
+    </figure>
+  </section>
+
+  <section id="contact">
+    <div class="sechead">
+      <span class="num">07</span>
+      <h2><span class="en">Contact</span><span class="es">Contacto</span></h2>
+    </div>
+    <div class="contact">
+      <p><span class="en">Open to remote roles, LATAM and international. The fastest way to reach me is email — I read everything and answer in Spanish or English.</span><span class="es">Disponible para roles remotos, en LATAM e internacionales. La vía más rápida es el mail — leo todo y contesto en español o inglés.</span></p>
+      <div class="clist">
+        <a class="btn solid" href="mailto:lautaro.tapia@gmail.com">lautaro.tapia@gmail.com</a>
+        <a class="btn" href="tel:+5491138001991">+54 9 11 3800 1991</a>
+        <a class="btn" href="https://www.linkedin.com/in/lautaro-tapia" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Lautaro Tapia</span>
+    <span>Buenos Aires, Argentina</span>
+    <span><span class="en">Built by hand — Archivo, Rubik, IBM Plex Mono</span><span class="es">Hecho a mano — Archivo, Rubik, IBM Plex Mono</span></span>
+    
+  </footer>
+</main>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var btns = Array.prototype.slice.call(document.querySelectorAll("[data-setlang]"));
+
+  function stored(){ try { return localStorage.getItem("lt-lang"); } catch(e){ return null; } }
+  function remember(v){ try { localStorage.setItem("lt-lang", v); } catch(e){} }
+
+  function setLang(lang){
+    root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang);
+    btns.forEach(function(b){
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-setlang") === lang));
+    });
+  }
+
+  var swapT = null;
+  btns.forEach(function(b){
+    b.addEventListener("click", function(){
+      var lang = b.getAttribute("data-setlang");
+      if (lang === root.getAttribute("data-lang")) return;
+      /* la paleta se invierte con el idioma: medio segundo de cruce, una sola vez */
+      root.classList.add("swapping");
+      clearTimeout(swapT);
+      swapT = setTimeout(function(){ root.classList.remove("swapping"); }, 520);
+      setLang(lang);
+      remember(lang);
+    });
+  });
+
+  var initial = stored();
+  if (initial !== "es" && initial !== "en") {
+    initial = (navigator.language || "en").toLowerCase().indexOf("es") === 0 ? "es" : "en";
+  }
+  setLang(initial);
+
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+  // barra de lectura
+  (function(){
+    var bar = document.createElement("div");
+    bar.className = "progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+    var raf = 0;
+    function draw(){
+      raf = 0;
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (h > 0 ? Math.min(1, window.scrollY / h) * 100 : 0) + "%";
+    }
+    addEventListener("scroll", function(){ if (!raf) raf = requestAnimationFrame(draw); }, { passive: true });
+    addEventListener("resize", draw, { passive: true });
+    draw();
+  })();
+
+  // aparecer al scrollear, con un escalonado corto entre hermanos
+  (function(){
+    var sel = ".sechead,.lead,.thesis,.gates,.metrics,.case,.build,.chapter,.photorow,.mediarow,.job,.numgrid,.grid2,.contact,.note,.pcard,.throughline,.seeking,.quote";
+    var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+    if (reduce || !("IntersectionObserver" in window)) {
+      els.forEach(function(el){ el.classList.add("rv-in"); });
+      root.setAttribute("data-rv", "ready");
+      return;
+    }
+    var seen = new Map();
+    els.forEach(function(el){
+      var k = el.parentNode, i = (seen.get(k) || 0);
+      seen.set(k, i + 1);
+      el.style.setProperty("--rv-d", Math.min(i, 5) * 70 + "ms");
+    });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        en.target.classList.add("rv-in");
+        io.unobserve(en.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.04 });
+    els.forEach(function(el){ io.observe(el); });
+    root.setAttribute("data-rv", "ready");
+  })();
+
+  // TODOS los números cuentan hasta su valor la primera vez que entran en pantalla:
+  // los seis de la portada, los de "en números" de cada proyecto y los de los callouts.
+  // Un texto puede traer más de un número ("2 h → 10 min", "70–100"): se animan todos juntos.
+  (function(){
+    if (reduce || !("IntersectionObserver" in window)) return;
+    var SEL = ".metric .fig, .numgrid .num b, .outcome .fig";
+    var targets = [];
+
+    Array.prototype.slice.call(document.querySelectorAll(SEL)).forEach(function(fig){
+      var langs = fig.querySelectorAll(".en,.es");
+      (langs.length ? Array.prototype.slice.call(langs) : [fig]).forEach(function(node){
+        var txt = node.textContent;
+        var parts = [], nums = [], last = 0, re = /\d+/g, m;
+        while ((m = re.exec(txt)) !== null) {
+          parts.push(txt.slice(last, m.index));
+          nums.push(+m[0]);
+          last = m.index + m[0].length;
+        }
+        if (!nums.length || Math.max.apply(null, nums) < 1) return;
+        parts.push(txt.slice(last));
+        targets.push({ node: node, parts: parts, nums: nums, done: false });
+      });
+    });
+    if (!targets.length) return;
+
+    function paint(t, e){
+      var out = t.parts[0];
+      for (var i = 0; i < t.nums.length; i++) out += Math.round(t.nums[i] * e) + t.parts[i + 1];
+      t.node.textContent = out;
+    }
+    function run(t){
+      if (t.done) return;
+      t.done = true;
+      var top = Math.max.apply(null, t.nums);
+      var dur = Math.min(1000, 560 + top * 4);
+      var t0 = performance.now();
+      function step(now){
+        var k = Math.min(1, (now - t0) / dur);
+        paint(t, 1 - Math.pow(1 - k, 3));
+        if (k < 1) requestAnimationFrame(step);
+      }
+      paint(t, 0);
+      requestAnimationFrame(step);
+      // red de seguridad: si los frames se cortan (pestaña en segundo plano, batería),
+      // el número tiene que quedar SIEMPRE en su valor real, no a mitad de camino
+      setTimeout(function(){ paint(t, 1); }, dur + 150);
+    }
+
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        targets.forEach(function(t){
+          if (t.node === en.target || en.target.contains(t.node)) run(t);
+        });
+      });
+    }, { threshold: 0.3 });
+    targets.forEach(function(t){ io.observe(t.node); });
+  })();
+
+  // parallax muy corto del retrato
+  (function(){
+    var img = document.querySelector(".portrait img");
+    if (!img || reduce) return;
+    var raf = 0;
+    function draw(){
+      raf = 0;
+      var y = Math.max(-14, Math.min(14, window.scrollY * 0.055 - 6));
+      img.style.setProperty("--py", y.toFixed(1) + "px");
+    }
+    addEventListener("scroll", function(){ if (!raf) raf = requestAnimationFrame(draw); }, { passive: true });
+    draw();
+  })();
+
+  // scrollspy on the section nav
+  var links = Array.prototype.slice.call(document.querySelectorAll(".navlinks a"));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute("href")); })
+                      .filter(Boolean);
+  if ("IntersectionObserver" in window && sections.length) {
+    var seen = {};
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ seen[en.target.id] = en.isIntersecting; });
+      var current = null;
+      sections.forEach(function(s){ if (seen[s.id] && !current) current = s.id; });
+      links.forEach(function(a){
+        if (current && a.getAttribute("href") === "#" + current) a.setAttribute("aria-current","true");
+        else a.removeAttribute("aria-current");
+      });
+    }, { rootMargin: "-88px 0px -65% 0px" });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
